@@ -521,35 +521,32 @@
                     requestAnimationFrame(animate);
                 }
                 animate();
-
             };
 
-            this.startAutoPan = function () {        
-                // ウィンドウリサイズ時のフィット
-               $(_window).on('mousemove', function () {
-                   clearInterval(autoPanTimer);
-                   autoPanTimer = setInterval($.proxy(that.autoPan, that), 5000);
-               });
-            }
-
-            // ダンスの小節
             this.bar = 0;
-
-            // ダンスフラグ
             this.dancing = true;
 
-            // ダンスをする
-            this.startDancing= function () {
-                that.dancing = true;
-                that.dance();
+            this.addSpotLight = function (){
+                console.log(spotLight2);
+                setTimeout(function () {                
+                    that.scene.add(spotLight2);
+                },100);
+                setTimeout(function () {
+                    that.scene.add(spotLight3);
+                },600);
+                setTimeout(function () {
+                    that.scene.add(spotLight4);
+                },1200);
             };
-            
-            // ダンスを止める
+            this.startDancing= function () {
+                this.dancing = true;
+                this.dance();
+            };
+
             this.stopDancing = function () {
-                that.dancing = false;
+                this.dancing = false;
             }
 
-            // ダンス用の関数
             this.dance = function () {
                 var step = 0;
                 var bpm = 160;
@@ -938,8 +935,6 @@
 
                 var motions = [walkFront, walkBack,  walkLeft, walkRight,   slideLeft, slideRight, slideFront, slideBack,   rotJumpLeft, rotJumpRight,   rotJumpLeft2, rotJumpRight2,   rotJumpFront, rotJumpFront2];
                 var random = Math.floor(Math.random() * 12);
-                
-                // 動き定義用の配列
                 var huri = [0,0,1,1,2,3,3,2,
                             4,4,8,8,8,8,5,5,
                             5,5,9,9,9,9,4,4,
@@ -976,3 +971,8 @@
     _window.jp.mi73.egg = new Egg();
 
 })(window, document, jQuery, THREE);
+
+window.jp.mi73.egg.init();
+// window.jp.mi73.egg.applyMap();
+// window.jp.mi73.egg.appearGround();
+var e = window.jp.mi73.egg;

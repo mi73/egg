@@ -97,7 +97,6 @@
                 }, 1000);
             }
             $('.text:nth(' + index + ')').animate({'left': '-=2000px'}, 500, easing, function () {
-                
                 if (index == 13) {
                     $('.text').css('color', 'black');
                 }

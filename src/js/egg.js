@@ -521,7 +521,16 @@
                     requestAnimationFrame(animate);
                 }
                 animate();
+
             };
+
+            this.startAutoPan = function () {        
+                // ウィンドウリサイズ時のフィット
+               $(_window).on('mousemove', function () {
+                   clearInterval(autoPanTimer);
+                   autoPanTimer = setInterval($.proxy(that.autoPan, that), 5000);
+               });
+            }
 
             // ダンスの小節
             this.bar = 0;
@@ -531,13 +540,13 @@
 
             // ダンスをする
             this.startDancing= function () {
-                this.dancing = true;
-                this.dance();
+                that.dancing = true;
+                that.dance();
             };
-
+            
             // ダンスを止める
             this.stopDancing = function () {
-                this.dancing = false;
+                that.dancing = false;
             }
 
             // ダンス用の関数
