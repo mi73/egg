@@ -161,7 +161,6 @@
 
 <footer></footer>
 </div>
-
 <script type="x-shader/x-vertex" id="vshader">
       uniform float time;
       uniform float size;
@@ -186,7 +185,6 @@
         gl_Position = projectionMatrix * mvPosition;
       }
 </script>
-
 <script type="x-shader/x-fragment" id="fshader">
       uniform vec3      color;
       uniform sampler2D texture;
@@ -201,5 +199,9 @@
 <script src="js/lib/all.min.js"></script>
 <script src="js/egg.min.js"></script>
 <script src="js/index.min.js"></script>
+<script>
+window.jp.mi73.egg.init();
+window.jp.mi73.index.init();
+</script>
 </body>
 </html>

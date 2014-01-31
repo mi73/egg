@@ -97,7 +97,6 @@
                 }, 1000);
             }
             $('.text:nth(' + index + ')').animate({'left': '-=2000px'}, 500, easing, function () {
-                
                 if (index == 13) {
                     $('.text').css('color', 'black');
                 }
@@ -119,6 +118,3 @@
     _window.jp.mi73.index = new Index();
 
 })(window, document, jQuery, window.jp.mi73.egg);
-
-window.jp.mi73.index.init();
-window.m = window.jp.mi73.index;
