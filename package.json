@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/mi73/egg/issues"
   },
-  "homepage": "https://github.com/mi73/egg",
+  "homepage": "http://mi73.jp/lab/egg/",
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-imagemin": "~0.5.0",
