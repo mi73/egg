@@ -70,9 +70,8 @@
             this.scene.add(this.camera);
 
 
-
             // スポットライト
-            var spotLight = new THREE.SpotLight(0xFFFFFF);
+            var spotLight = new THREE.SpotLight(0x666666);
             spotLight.position.set(150, 150, 300);
             spotLight.target.position.set(0, 0, 0);
             spotLight.castShadow = true;
@@ -80,25 +79,25 @@
 
 
             // スポットライト
-            var spotLight2 = new THREE.SpotLight(0xFFFFFF);
+            var spotLight2 = new THREE.SpotLight(0x666666);
             spotLight2.position.set(100, -150, 300);
             spotLight2.target.position.set(0, 0, 0);
             spotLight2.castShadow = true;
-            //this.scene.add(spotLight2);
+            this.scene.add(spotLight2);
 
             // スポットライト
-            var spotLight3 = new THREE.SpotLight(0xFFFFFF);
+            var spotLight3 = new THREE.SpotLight(0x666666);
             spotLight3.position.set(150, 500, 300);
             spotLight3.target.position.set(0, 0, 0);
             spotLight3.castShadow = true;
-            //this.scene.add(spotLight3);
+            this.scene.add(spotLight3);
 
             // スポットライト
-            var spotLight4 = new THREE.SpotLight(0xFFFFFF);
+            var spotLight4 = new THREE.SpotLight(0x666666);
             spotLight4.position.set(100, -500, 300);
             spotLight4.target.position.set(0, 0, 0);
             spotLight4.castShadow = true;
-            //this.scene.add(spotLight4);
+            this.scene.add(spotLight4);
 
             // アンビエントライト 全体を照らす照明
             var light = new THREE.AmbientLight(0x101010); // soft white light
@@ -543,7 +542,7 @@
                 that.dancing = true;
                 that.dance();
             };
-            
+
             // ダンスを止める
             this.stopDancing = function () {
                 that.dancing = false;
